@@ -9,6 +9,7 @@ function Card({data,type}) {
         switch (type) {
             case "album": {
                 const {image,follows,title,slug,songs} = data;
+                
 
                 return(
                     <Tooltip title= {`${songs.length} songs`} placement="top" arrow>
@@ -54,7 +55,7 @@ function Card({data,type}) {
         }
     };
 
-    getCard(type);
+   return getCard(type);
 }
 
 

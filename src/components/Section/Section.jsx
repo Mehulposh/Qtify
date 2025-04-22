@@ -10,6 +10,7 @@ function Section({title,data,filtersData,type}) {
     const [filters,setFilters] = useState([{key: "all" , label: "All"}]);
     const [selectedFiltersIndex,setSelectedFiltersIndex] = useState(0);
     const [carouselToggle,setCarouselToggle] = useState(true);
+    const [filtersLoaded, setFiltersLoaded] = useState(false);
 
     const handleToggle = () => {
         setCarouselToggle((oldState) => !oldState);
@@ -17,14 +18,17 @@ function Section({title,data,filtersData,type}) {
 
 
     useEffect(() => {
-        if(filtersData){
+        if(!filtersLoaded && filtersData){
             filtersData().then((response) => {
                 const  {data} = response;
-                setFilters([...filters , ...data]);
+                setFilters([{key: "all" , label: "All"}, ...data]);
+                setFiltersLoaded(true);
             });
+            
         }
-    },[]);
-
+        
+    },[filtersData,filtersLoaded]);
+    
     const renderFilters = filters.length > 1; 
 
     const cardRender = data.filter((item) => 
@@ -45,8 +49,8 @@ function Section({title,data,filtersData,type}) {
                 <div className={styles.filterWrapper}>
                     <Filters 
                         filters={filters}
-                        selectedFiltersIndex={selectedFiltersIndex}
-                        setSelectedFiltersIndex={setSelectedFiltersIndex}
+                        selectedFilterIndex={selectedFiltersIndex}
+                        setSelectedFilterIndex={setSelectedFiltersIndex}
                     />
                 </div>
             )}

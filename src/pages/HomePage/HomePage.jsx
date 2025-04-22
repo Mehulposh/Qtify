@@ -9,7 +9,7 @@ import styles from './HomePage.module.css';
 export default function HomePage() {
     const {data} = useOutletContext();
     const {topAlbums,newAlbums,songs,genres} = data;
-    console.log("topalbums",topAlbums)
+    
     return(
         <>
             <Hero/>
@@ -17,9 +17,9 @@ export default function HomePage() {
                 <Section title="Top Albums" data={topAlbums} type="album" />
                 <Section title="New Albums" data={newAlbums} type="album" />
                 <Section 
-                    title="songs"
+                    title="Songs"
                     data={songs}
-                    filterSongs={fetchFilters}
+                    filtersData={fetchFilters}
                     type="song"
                 />
 

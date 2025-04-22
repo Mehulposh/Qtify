@@ -22,7 +22,7 @@ function App() {
           fetchSongs(),
           fetchFilters()
         ]);
-        console.log(topAlbumsData.value)
+        // console.log(topAlbumsData.value)
         
         setTopAlbums(topAlbumsData.value);
         setNewAlbums(newAlbumsData.value);

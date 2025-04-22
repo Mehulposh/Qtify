@@ -30,7 +30,7 @@ function CarouselLeftNavigation() {
         <div className={styles.leftNavigation}>
             {!isBeginning && (
                 <KeyboardArrowLeftIcon 
-                    className = {styles.arrow}
+                    className = {styles.arrow1}
                     onClick={() => swiper.slidePrev()}
                     aria-label="Previous Slide"
                 />

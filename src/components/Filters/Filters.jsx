@@ -42,6 +42,7 @@ function Filters({filters,selectedFilterIndex,setSelectedFilterIndex}) {
     return(
         <div className={styles.filterContainer}>
             <Tabs
+                
                 value={selectedFilterIndex}
                 onChange={handleChange}
                 variant="scrollable"     
