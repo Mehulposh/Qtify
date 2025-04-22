@@ -40,7 +40,7 @@ function App() {
     fetchData();
   },[]);
   // console.log(topAlbums,newAlbums,songs,genres)
-  const searchData = useMemo(() => [topAlbums,newAlbums],[topAlbums,newAlbums]);
+  const searchData = useMemo(() => [...topAlbums,...newAlbums],[topAlbums,newAlbums]);
 
   const contextData = useMemo(() => ({
     data: {
