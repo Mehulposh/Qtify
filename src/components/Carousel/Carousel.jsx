@@ -31,7 +31,7 @@ function Carousel({data,renderComponent}) {
             >
                 <Controls data={data} />
                 <div>
-                    <CarouselLeftNavigation size={20}/>
+                    <CarouselLeftNavigation />
                     <CarouselRightNavigation />
                 </div>
                 {data.map((ele) => (
