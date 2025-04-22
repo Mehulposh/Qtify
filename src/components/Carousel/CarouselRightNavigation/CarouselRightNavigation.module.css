@@ -1,0 +1,8 @@
+.rightNavigation{
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    transform: translateY(-50%);
+    z-index: 3;
+}
