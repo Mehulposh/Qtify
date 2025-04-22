@@ -1,7 +1,5 @@
 
 import React,{useEffect,useState,useMemo} from 'react';
-import { Route,Routes } from 'react-router-dom';
-import HomePage from "./pages/HomePage/HomePage";
 import Navbar from './components/Navbar/Navbar';
 import { Outlet } from "react-router-dom";
 import { StyledEngineProvider } from '@mui/material/styles';
@@ -38,8 +36,8 @@ function App() {
       }
     }
     fetchData();
-  },[])
-
+  },[]);
+  console.log(topAlbums,newAlbums,songs,genres)
   const searchData = useMemo(() => [topAlbums,newAlbums],[topAlbums,newAlbums]);
 
   const contextData = useMemo(() => ({
