@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import {useSwiper} from "swiper/react";
-import {ReactComponent as LeftArrow} from "../../../assets/LeftArrow.svg";
+// import {ReactComponent as LeftArrow} from "../../../assets/LeftArrow.svg";
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import styles from "./CarouselLeftNavigation.module.css";
 
 function CarouselLeftNavigation() {
@@ -28,7 +29,7 @@ function CarouselLeftNavigation() {
     return (
         <div className={styles.leftNavigation}>
             {!isBeginning && (
-                <LeftArrow 
+                <KeyboardArrowLeftIcon 
                     className = {styles.arrow}
                     onClick={() => swiper.slidePrev()}
                     aria-label="Previous Slide"

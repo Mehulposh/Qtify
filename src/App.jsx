@@ -22,12 +22,14 @@ function App() {
           fetchSongs(),
           fetchFilters()
         ]);
+        console.log(topAlbumsData.value)
         
-        setTopAlbums(topAlbumsData);
-        setNewAlbums(newAlbumsData);
-        setSongs(songsData);
-        setGenres(genresData);
+        setTopAlbums(topAlbumsData.value);
+        setNewAlbums(newAlbumsData.value);
+        setSongs(songsData.value);
+        setGenres(genresData.value);
 
+        // console.log(topAlbumsData)
         
       }catch(e){
         console.error(e);

@@ -49,7 +49,7 @@ function Card({data,type}) {
             }
 
             default: 
-                return null;
+                return <></>;
                
         }
     };

@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import {useSwiper} from "swiper/react";
-import {ReactComponent as RightArrow} from "../../../assets/RightArrow.svg";
+// import {ReactComponent as RightArrow} from "../../../assets/RightArrow.svg";
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import styles from "./CarouselRightNavigation.module.css";
 
 function CarouselRightNavigation() {
@@ -28,7 +29,7 @@ function CarouselRightNavigation() {
     return (
         <div className={styles.rightNavigation}>
             {!isEnd && (
-                <RightArrow 
+                <KeyboardArrowRightIcon 
                     className = {styles.arrow}
                     onClick={() => swiper.slideNext()}
                     aria-label="Next Slide"
