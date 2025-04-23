@@ -6,7 +6,7 @@ import styles from "./CarouselRightNavigation.module.css";
 
 function CarouselRightNavigation() {
     const swiper = useSwiper();
-    const [isEnd, setIsEnd] = useState(true);
+    const [isEnd, setIsEnd] = useState(false);
 
     useEffect(() => {
         const handleChange = () => {
@@ -28,19 +28,19 @@ function CarouselRightNavigation() {
 
     return (
         <div className={styles.rightNavigation}>
-            {!isEnd && (
+            
                 <KeyboardArrowRightIcon 
                     className = {styles.arrow}
-                    onClick={() => !isEnd && swiper.slideNext()}
+                    onClick={() => swiper.slideNext()}
                     aria-label="Next Slide"
                     data-cy="carousel-next-button"
                     style={{
                         visibility: isEnd ? "hidden" : "visible",
-                        position: isEnd ? "absolute" : "static",
-                        pointerEvents: isEnd ? "none" :  'auto',
+                        pointerEvents: isEnd ? "none" : "auto",
                     }}
+                    
                 />
-            )}
+            
         </div>
     )
 }
