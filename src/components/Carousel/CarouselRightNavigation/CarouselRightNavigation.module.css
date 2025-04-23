@@ -13,3 +13,8 @@
     border-radius: 50%;
     font-size: 30px;
 }
+
+.disabled {
+    pointer-events: none; /* Prevents clicks */
+    cursor: default;
+}
