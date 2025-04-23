@@ -37,7 +37,7 @@ function CarouselRightNavigation() {
                     style={{
                         visibility: isEnd ? "hidden" : "visible",
                         position: isEnd ? "absolute" : "static",
-                        pointerEvents: 'auto',
+                        pointerEvents: isEnd ? "none" :  'auto',
                     }}
                 />
             )}
