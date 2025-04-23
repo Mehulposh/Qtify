@@ -42,3 +42,14 @@ export const fetchFilters = async() => {
         
     }
 } ;
+
+
+export const  fetchQuetion = async () => {
+    try{
+        const response = await axios.get(`${Backend_Endpoint}/faq`);
+        return response.data;
+    }catch(e){
+        console.error(e);
+        
+    }
+};
