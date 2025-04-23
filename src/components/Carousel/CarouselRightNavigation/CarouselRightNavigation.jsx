@@ -30,11 +30,15 @@ function CarouselRightNavigation() {
         <div className={styles.rightNavigation}>
             {!isEnd && (
                 <KeyboardArrowRightIcon 
-                    className = {`${styles.arrow} ${isEnd ? styles.disabled : "active"}`}
+                    className = {styles.arrow}
                     onClick={() => !isEnd && swiper.slideNext()}
                     aria-label="Next Slide"
                     data-cy="carousel-next-button"
-                    style={{opacity: isEnd ? 0.7 : 1}}
+                    style={{
+                        visibility: isEnd ? "hidden" : "visible",
+                        position: isEnd ? "absolute" : "static",
+                        pointerEvents: 'auto',
+                    }}
                 />
             )}
         </div>
