@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
 import { ErrorBoundary } from "react-error-boundary";
-import Home from './pages/HomePage/HomePage.jsx'
+import Home from './pages/HomePage/HomePage.jsx';
 import AlbumPage from './pages/AlbumPage/AlbumPage.jsx'
 
 // Error fallback component

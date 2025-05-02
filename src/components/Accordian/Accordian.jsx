@@ -39,6 +39,7 @@ const Accordian = () => {
             expandIcon={<KeyboardArrowDownIcon className={styles.nav} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
+            className={styles.que}
         >
             <Typography className={styles.title}>{data.question}</Typography>
         </AccordionSummary>

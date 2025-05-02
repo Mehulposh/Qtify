@@ -53,3 +53,14 @@ export const  fetchQuetion = async () => {
         
     }
 };
+
+
+export const fetchAlbum = async (slug) => {
+    try{
+        const response = await axios.get(`${Backend_Endpoint}/album/${slug}`);
+        return response.data;
+    }catch(e){
+        console.error(e);
+        
+    }
+}
